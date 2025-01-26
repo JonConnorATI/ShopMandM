@@ -12,7 +12,7 @@ import commonMethods.commonMethodsMANDM;
 public class HomePageMANDM extends commonMethodsMANDM{
 
 	public static void selectLoginLink() {
-		Click(By.className("myAccount_guest"));
+		Click(By.className("myAccount"));
 		
 	}
 	

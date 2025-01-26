@@ -26,7 +26,7 @@ public class StepsCartIsCachedMANDM extends commonMethodsMANDM {
 	}
 	
 	@And("add them to the cart size {string}")
-	public void add_them_to_the_cart_size(String string) {
+	public void add_them_to_the_cart_size(String string) throws InterruptedException {
 		MensClothingPageMANDM.addToCart(string);
 	}
 		

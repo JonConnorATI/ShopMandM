@@ -10,7 +10,8 @@ Feature: Cart adds up correctly when items are added. Cart is cached and remeber
 	And I want to go shopping
 	When I select Mens I will be in the mens clothing page
 	
-	
+
+ 
   Scenario: Add Jeans
 		When I select the product and size I want
 		|Product|Size	  |
@@ -18,6 +19,7 @@ Feature: Cart adds up correctly when items are added. Cart is cached and remeber
 		And select the first in the list size "Waist 36"
 		Then the shopping basket count will be 1
 		And the cart total should be price 1
+
 		
 	Scenario: Add Shirt
 		When I select the product and size I want 
@@ -26,7 +28,8 @@ Feature: Cart adds up correctly when items are added. Cart is cached and remeber
 		And select the first in the list size "X-Large"
 		Then the shopping basket count will be 2
 		And the cart total should be price 2
-		
+
+	
 	Scenario: Add Shoes
 		When I select the product and size I want 
 		|Product|Size	  |

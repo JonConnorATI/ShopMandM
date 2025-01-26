@@ -11,14 +11,14 @@ public class StepsCartAddsUpMANDM extends commonMethodsMANDM {
 	
 
 @When("I select the product and size I want")
-public void i_select_the_product_and_size_i_want(io.cucumber.datatable.DataTable dataTable) {
+public void i_select_the_product_and_size_i_want(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
 	List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
 	MensClothingPageMANDM.chooseProduct(data.get(0).get("Product"));
 	MensClothingPageMANDM.chooseSize(data.get(0).get("Size"));
 }
 
 @When("select the first in the list size {string}")
-public void select_the_first_in_the_list_size(String string) {
+public void select_the_first_in_the_list_size(String string) throws InterruptedException {
 	MensClothingPageMANDM.addToCart(string);
 }
 

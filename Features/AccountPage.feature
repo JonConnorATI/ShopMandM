@@ -33,8 +33,10 @@ Then I can change the first name and select save so that it will be updated
 Scenario: Open the Cardholder Address section
 Given I select the "Cardholder Address" Tab
 Then I should be in the "Address" section
-When I select to edit "address" section
-Then I can change address2 and select save so that it will be updated
+And I see a message that I can not change the address
+|Message        |
+|To change your cardholder address, you'll need to update it during the checkout when placing an order.|
+
 
 
 Scenario: Open the Delivery Addresses section

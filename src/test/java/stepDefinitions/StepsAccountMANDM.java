@@ -137,6 +137,15 @@ public class StepsAccountMANDM extends commonMethodsMANDM {
 		MyAccountPageMANDM.checkAlertText(string);
 	}
 
+    @And("I see a message that I can not change the address")
+    public void I_see_a_message_that_I_can_not_change_the_address(DataTable dataTable) {
+        List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
+		String currentMessage = data.get(0).get("Message");
+		MyAccountPageMANDM.confirmAddressEditMsg(currentMessage);
+    }
+
+   
+
 
 
 

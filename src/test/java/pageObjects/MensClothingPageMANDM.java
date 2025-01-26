@@ -14,25 +14,31 @@ import commonMethods.commonMethodsMANDM;
 public class MensClothingPageMANDM extends commonMethodsMANDM {
 
 	// Choose the product
-	public static void chooseProduct(String product) {
-		WaitForElementToBePresent(By.cssSelector("#filter_product h2"));
-		Click(By.cssSelector("#filter_product h2"));
-		Click(By.xpath("//span[@class='product'and text()='" + product + "']"));
+	public static void chooseProduct(String product) throws InterruptedException {
+		if (isElementPresent(By.linkText("Shop all mens "))==true) {
+			Click(By.linkText("Shop all mens "));
+			Thread.sleep(2000);
+				
+		}
+
+		WaitForElementToBePresent(By.cssSelector("div[id='filter_product'] h2"));
+		Click(By.xpath("//h2[text()='PRODUCT']/parent::div"));
+		Click(By.xpath("//span[text()='" + product + "']/parent::label"));
+		
 
 	}
 
 	// Choose the size
 	public static void chooseSize(String size) {
 		Click(By.cssSelector("#filter_size > .filter__heading"));
-		Click(By.xpath("//span[@class='size'and text()='" + size + "']"));
+		Click(By.xpath("//span[@class='size'and text()='" + size + "']/parent::label"));
 
 	}
 
 	// Choose the product type
 	public static void chooseProductType(String type) {
-		//
-		Click(By.cssSelector("#filter_producttype h2"));
-		Click(By.xpath("//span[@class='product type'and text()='" + type + "']"));
+		Click(By.xpath("//h2[text()='PRODUCT TYPE']/parent::div"));
+		Click(By.xpath("//span[@class='product type'and text()='" + type + "']/parent::label"));
 	}
 
 	// Select what to sort by eg Cheapest
@@ -87,11 +93,18 @@ public class MensClothingPageMANDM extends commonMethodsMANDM {
 	}
 	
 	//Selects a product and adds to the cart
-	public static void addToCart(String string) {
-		Click(By.xpath("(//*[@id='productlist']//button[@class='product__quick-buy'])[1]"));
+	public static void addToCart(String string) throws InterruptedException {
+		//Thread.sleep(2000);
+		/*Click(By.xpath("(//*[@id='productlist']//button[@class='product__quick-buy'])[1]"));
 		Click(By.xpath("(//button[@class='attributes__select' and contains(text(),'" + string + "')])[1]"));
 		Click(By.xpath("(//*[@class='product__atb buyButton'])[1]"));
-		Click(By.cssSelector("#atbClose"));
+		Click(By.cssSelector("#atbClose"));*/
+		JSClick(driver, By.xpath("(//*[@id='productlist']//button[@class='product__quick-buy'])[1]"));
+		JSClick(driver, By.xpath("(//button[@class='attributes__select' and contains(text(),'" + string + "')])[1]"));
+		JSClick(driver, By.xpath("(//*[@class='product__atb buyButton'])[1]"));
+		JSClick(driver, By.cssSelector("#atbClose"));
+		refreshPage();
+		Thread.sleep(2000);
 		
 	}
 	

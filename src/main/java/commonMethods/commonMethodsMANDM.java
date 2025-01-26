@@ -162,4 +162,20 @@ public class commonMethodsMANDM  extends basePageMANDM{
 		waitForPageLoaded(driver);
 	}
 
+	//Method to get an elements text
+	public static void assertElementTextIsTrue (By locator, String ExptdText) {
+		String ActText = driver.findElement(locator).getText();
+		System.out.println("actual is: " + ActText + " and Expctd is: " + ExptdText);
+		Assert.assertEquals(ActText, ExptdText);
+		
+	}
+
+	//Javascript click
+	public static void JSClick(WebDriver driver, By locator) {
+		WebElement element = driver.findElement(locator);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", element);
+
+	}
+
 }

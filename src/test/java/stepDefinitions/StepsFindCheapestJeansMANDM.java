@@ -24,7 +24,7 @@ public class StepsFindCheapestJeansMANDM extends commonMethodsMANDM {
 	    HomePageMANDM.SelectMensLink();
 	}
 	@When("I select the sizes and products that I want from the REFINE BY side menu")
-	public void i_select_the_sizes_and_products_that_i_want_from_the_refine_by_side_menu(DataTable dataTable) {
+	public void i_select_the_sizes_and_products_that_i_want_from_the_refine_by_side_menu(DataTable dataTable) throws InterruptedException {
 		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
 		MensClothingPageMANDM.chooseProduct(data.get(0).get("Product"));
 		MensClothingPageMANDM.chooseSize(data.get(0).get("Size"));

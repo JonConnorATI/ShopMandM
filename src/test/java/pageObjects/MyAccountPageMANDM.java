@@ -115,6 +115,14 @@ public class MyAccountPageMANDM extends commonMethodsMANDM {
 		
 	}
 
+	//confirms the cardholder message about not updating address in this section
+	public static void confirmAddressEditMsg(String string) {
+		assertElementTextIsTrue(By.xpath("//*[@class='cardholder-address__msg']"), string);
+
+
+
+	}
+
 	//clear text in address2 field, enter text, save text and assert it has updated
 	public static void editSaveCheckAddress() {
 		editSaveCheckTextField(By.cssSelector("#Address_AddressLine2"),By.cssSelector("#AddressLine2-Display"));
