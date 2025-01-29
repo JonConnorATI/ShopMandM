@@ -12,6 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class basePageMANDM {
 
+	//CUCUMBER_PUBLISH_TOKEN=67c18a10-083d-4c53-90a9-74985f2bd230
 	// Write here what browser you want to test with
 	private static String browser = /* write browser here ---> */ "chrome";
 
@@ -46,7 +47,7 @@ public class basePageMANDM {
 					ops.addArguments("--disable-notifications");
 					ops.addArguments("--remote-allow-origins=*");
 					//ops.addArguments("--disable-popup-blocking");
-					ops.addArguments("--headless");
+					//ops.addArguments("--headless");
 					ops.addArguments("--no-sandbox");
 					ops.addArguments("--disable-dev-shm-usage");
 					ops.addArguments("--window-size=1920,1080");
