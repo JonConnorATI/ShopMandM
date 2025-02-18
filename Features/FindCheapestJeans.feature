@@ -7,7 +7,7 @@ Given I open the website I will be in the landing page
 When I select Mens I will be in the mens clothing page
 When I select the sizes and products that I want from the REFINE BY side menu
 |Product|Size	|Product Type	|
-|Jeans	|36x30	|Straight Jeans	|
+|Jeans	|W36 L30|Straight Jeans	|
 And I sort by the lowest price
 Then the 1st product in the list has the lowest or equal lowest price
 
