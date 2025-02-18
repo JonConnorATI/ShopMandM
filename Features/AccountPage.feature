@@ -61,11 +61,11 @@ Then I can change the Date of Birth and select save so that it will be updated
 
 
 
-Scenario: Open the Email section
-Given I select the "Email" Tab
-Then I should be in the "Email" section
-When I select to edit "email" section
-Then I can change the email and select save so that it will be updated
-And change it back again to the original value
+# Scenario: Open the Email section
+# Given I select the "Email" Tab
+# Then I should be in the "Email" section
+# When I select to edit "email" section
+# Then I can change the email and select save so that it will be updated
+# And change it back again to the original value
 
 

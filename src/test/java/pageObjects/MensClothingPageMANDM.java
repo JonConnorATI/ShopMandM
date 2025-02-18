@@ -94,7 +94,7 @@ public class MensClothingPageMANDM extends commonMethodsMANDM {
 	
 	//Selects a product and adds to the cart
 	public static void addToCart(String string) throws InterruptedException {
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		/*Click(By.xpath("(//*[@id='productlist']//button[@class='product__quick-buy'])[1]"));
 		Click(By.xpath("(//button[@class='attributes__select' and contains(text(),'" + string + "')])[1]"));
 		Click(By.xpath("(//*[@class='product__atb buyButton'])[1]"));
